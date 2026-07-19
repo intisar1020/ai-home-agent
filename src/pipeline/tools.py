@@ -17,16 +17,12 @@ from typing import Type
 from pydantic import BaseModel
 
 from schemas import (
-    CheckEntryArgs,
-    CountPeopleArgs,
-    DescribeEventArgs,
-    DetectMotionArgs,
     DetectPersonArgs,
-    DetectVehicleArgs,
+    CheckEntryArgs,
     FindEventArgs,
-    ListCamerasArgs,
+    CountPeopleArgs,
     SummarizeActivityArgs,
-    TrackPersonArgs,
+    DetectVehicleArgs,
 )
 
 
@@ -48,18 +44,6 @@ TOOLS = [
     ),
 
     Tool(
-        name="detect_motion",
-        description="Check whether a specific camera feed shows motion or activity.",
-        schema=DetectMotionArgs,
-    ),
-
-    Tool(
-        name="track_person",
-        description="Track a person across all available cameras using their appearance.",
-        schema=TrackPersonArgs,
-    ),
-
-    Tool(
         name="check_entry",
         description="Check whether a door, window, or gate is open or closed.",
         schema=CheckEntryArgs,
@@ -71,11 +55,6 @@ TOOLS = [
         schema=FindEventArgs,
     ),
 
-    Tool(
-        name="describe_event",
-        description="Describe what happened at a specific timestamp.",
-        schema=DescribeEventArgs,
-    ),
 
     Tool(
         name="count_people",
@@ -93,12 +72,6 @@ TOOLS = [
         name="detect_vehicle",
         description="Check a camera feed for any vehicles present.",
         schema=DetectVehicleArgs,
-    ),
-
-    Tool(
-        name="list_cameras",
-        description="List all available security cameras in the system.",
-        schema=ListCamerasArgs,
     ),
 ]
 

@@ -17,7 +17,7 @@ class Config:
     top_p: float = 0.95
     max_tokens: int = 2048
 
-    total_samples: int = 1000
+    total_samples: int = 500
     batch_size: int = 5
 
     max_retries: int = 3

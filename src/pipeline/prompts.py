@@ -44,15 +44,11 @@ This is NOT real-time — the user is reviewing previously recorded video.
 Randomly choose from these categories:
 
 — person detection (find someone matching a description in recorded footage)
-— motion detection (check for activity during a time window on a camera)
-— person tracking (follow a person across all cameras in the saved footage)
 — entry monitoring (check if a door, window, or gate was opened)
 — event search (find when something happened in the recording)
-— event description (describe what happened at a specific recorded time)
 — people counting (count how many people appeared on a camera)
 — activity summarization (summarize what happened during a time period)
 — vehicle detection (check for cars, trucks, or bikes in the recordings)
-— camera listing (ask what cameras are available)
 
 Cover both INDOOR and OUTDOOR locations:
 - indoor: hallway, living room, kitchen, basement, garage
@@ -63,7 +59,7 @@ Use past-tense or review-oriented language — never "right now" or "currently".
 Return ONLY a JSON array with the single query string.
 
 Example:
-["Did anyone approach the front door between 2 AM and 4 AM?"]
+["Find a person holding delivery goods in my front door"]
 """.strip()
 
 

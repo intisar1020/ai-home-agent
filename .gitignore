@@ -21,3 +21,7 @@ env/
 Thumbs.db
 
 *.log
+
+ckpts/
+wandb/
+*.ckpt

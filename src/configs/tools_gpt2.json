@@ -1,0 +1,41 @@
+{
+    "seed": 42,
+    "wandb_project": "ai_monitor",
+    "wandb_name": "exp_1.1",
+    "early_stop_patience": 5,
+    "tool_eval_every_n_epochs": 5,
+    "tool_eval_max_new_tokens": 128,
+    "model": {
+        "vocab_size": 50257,
+        "emb_dim": 768,
+        "n_layers": 12,
+        "n_heads": 12,
+        "context_length": 1024,
+        "drop_rate": 0.1,
+        "qkv_bias": true
+    },
+    "train": {
+        "lr": 3e-5,
+        "epoch": 50,
+        "weight_decay": 0.1,
+        "pretrained_path": "../ckpts/gpt2-124M.pth",
+        "warmup_steps": 500
+    },
+    "data": {
+        "data_path": "output/dataset.jsonl",
+        "batch_size": 2,
+        "num_workers": 0,
+        "pad_token_id": 50256,
+        "ignore_index": -100,
+        "max_length": 1024,
+        "device": "cuda"
+    },
+    "trainer": {
+        "max_epochs": 50,
+        "log_every_n_steps": 5,
+        "devices": 1,
+        "precision": "bf16-mixed",
+        "gradient_clip_val": 1.0,
+        "accumulate_grad_batches": 1
+    }
+}
